@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 # #########################################################################
-# Copyright (c) 2015, UChicago Argonne, LLC. All rights reserved.         #
+# Copyright (c) 2015-2019, UChicago Argonne, LLC. All rights reserved.    #
 #                                                                         #
-# Copyright 2015. UChicago Argonne, LLC. This software was produced       #
+# Copyright 2015-2019. UChicago Argonne, LLC. This software was produced  #
 # under U.S. Government contract DE-AC02-06CH11357 for Argonne National   #
 # Laboratory (ANL), which is operated by UChicago Argonne, LLC for the    #
 # U.S. Department of Energy. The U.S. Government has rights to use,       #
@@ -53,16 +53,12 @@ Module for reconstruction algorithms.
 from __future__ import (absolute_import, division, print_function,
                         unicode_literals)
 
-import six
 import numpy as np
-import tomopy.util.mproc as mproc
 import tomopy.util.extern as extern
 import tomopy.util.dtype as dtype
 from tomopy.sim.project import get_center
 from tomopy.recon.algorithm import init_tomo
-import math
 import logging
-import concurrent.futures as cf
 
 logger = logging.getLogger(__name__)
 
